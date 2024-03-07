@@ -21,7 +21,7 @@ const data = [];
 btnSubmit.addEventListener('click', function (event) {
 
     // Não deixa o formulário se comportar como padrão, ou seja,
-    // enviar os dados para próxima página / reuisição
+    // enviar os dados para próxima página / requisição
     event.preventDefault();
 
 
