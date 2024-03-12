@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 // Pegando o id do html
 /*const main = document.getElementById('principal');
 
 // Criando objetos
+=======
+const main = document.getElementById('principal');
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+// Criando um objeto
+const myItem = {
+    color: 'blue',
+    text: 'Primeiro item'
+}
+>>>>>>> 2ac4fef0879636818c74827ca21dd564404276bf
 
 const myItems = [
 
@@ -29,6 +42,7 @@ const myItems = [
 ];
 
 
+<<<<<<< HEAD
 // Para ler o objeto e dar comandos para aparecer no browser
 
 myItems.forEach(item => {
@@ -82,3 +96,18 @@ const cardData = [
 
 
 
+=======
+numbers.forEach(number => {
+    const meuH1 = document.createElement('h1');
+    meuH1.innerText = document.createElement('h1')
+    meuH1.innerText = number;
+
+    meuH1.className = 'color';
+    meuH1.style.color = 'blue';
+
+
+
+
+    main.appendChild(meuH1);
+});
+>>>>>>> 2ac4fef0879636818c74827ca21dd564404276bf
