@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*.color {
     color: blue;
     background-color: blueviolet;
@@ -64,4 +65,10 @@
 .w3-row {
     display: flex;
     justify-content: space-evenly;
+=======
+.color {
+    color: blue;
+    background-color: blueviolet;
+    border-radius: 20px;
+>>>>>>> 2ac4fef0879636818c74827ca21dd564404276bf
 }
