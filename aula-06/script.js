@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Pegando o id do html
 /*const main = document.getElementById('principal');
 
@@ -14,7 +14,6 @@ const myItem = {
     color: 'blue',
     text: 'Primeiro item'
 }
->>>>>>> 2ac4fef0879636818c74827ca21dd564404276bf
 
 const myItems = [
 
@@ -41,8 +40,6 @@ const myItems = [
 
 ];
 
-
-<<<<<<< HEAD
 // Para ler o objeto e dar comandos para aparecer no browser
 
 myItems.forEach(item => {
@@ -54,14 +51,14 @@ myItems.forEach(item => {
 }); */
 
 
-const card = document.getElementById('card');
+/*
 const cardImage = document.getElementById('cardImage');
 const image = document.getElementById('image');
 const nome = document.getElementById('nome')
 const linha = document.getElementById('linha');
 const diaIcone = document.getElementById('diaIcone');
 const dia = document.getElementById('dia');
-const icone = document.getElementById('icone');
+const icone = document.getElementById('icone');*/
 
 
 /*
@@ -94,20 +91,84 @@ const cardData = [
 
 ];*/
 
+const card = document.getElementById('card');
+
+const cities = [
+    {
+        city: ['londres', 'Madrid', 'Paris', 'rio', 'Salvador', 'Veneza'],
+        weather: 10,
+        icone: ['image/icons/chuva.png', 'image/icons/sol.png', 'image/icons/nuvens.png'],
+        dia: ['SEG', 'TER', 'QUA']
+    },
+
+    {
+        city: ['londres', 'Madrid', 'Paris', 'rio', 'Salvador', 'Veneza'],
+        weather: 10,
+        icone: ['image/icons/chuva.png', 'image/icons/sol.png', 'image/icons/nuvens.png'],
+        dia: ['SEG', 'TER', 'QUA']
+    },
+
+    {
+        city: ['londres', 'Madrid', 'Paris', 'rio', 'Salvador', 'Veneza'],
+        weather: 10,
+        icone: ['image/icons/chuva.png', 'image/icons/sol.png', 'image/icons/nuvens.png'],
+        dia: ['SEG', 'TER', 'QUA']
+    },
+
+    {
+        city: ['londres', 'Madrid', 'Paris', 'rio', 'Salvador', 'Veneza'],
+        weather: 10,
+        icone: ['image/icons/chuva.png', 'image/icons/sol.png', 'image/icons/nuvens.png'],
+        dia: ['SEG', 'TER', 'QUA']
+    },
+
+    {
+        city: ['londres', 'Madrid', 'Paris', 'rio', 'Salvador', 'Veneza'],
+        weather: 10,
+        icone: ['image/icons/chuva.png', 'image/icons/sol.png', 'image/icons/nuvens.png'],
+        dia: ['SEG', 'TER', 'QUA']
+    },
+
+    {
+        city: ['londres', 'Madrid', 'Paris', 'rio', 'Salvador', 'Veneza'],
+        weather: 10,
+        icone: ['image/icons/chuva.png', 'image/icons/sol.png', 'image/icons/nuvens.png'],
+        dia: ['SEG', 'TER', 'QUA']
+    },
+];
 
 
-=======
-numbers.forEach(number => {
-    const meuH1 = document.createElement('h1');
-    meuH1.innerText = document.createElement('h1')
-    meuH1.innerText = number;
 
-    meuH1.className = 'color';
-    meuH1.style.color = 'blue';
+cities.forEach(cidade => {
+    const cardImage = document.createElement('div');
+    cardImage.className = "cardImage";
 
+    for (i = 0; 0 < cities.length; i++) {
+        r = Math.floor(Math.random() * 2);
 
+        const weatherCard = `<div id="cardImage" class="cardImage">
+            <img id="image" class="cidade" src="image/${cidade.city[i]}.png" alt="">
+            <div id="nome" class="nameCity">${cidade.city[i].toUpperCase()} ${cidade.weather}&deg; C</div>
+        </div>
+        <div id="linha" class="w3-row">
+            <div id="diaIcone" class="cardClima">
+                <h3 id="dia" class="text">${cidade.dia[0]}</h3>
+                <img id="icone" class="icone" src="${cidade.icone[r]}" alt="sun">
+            </div>
+            <div id="diaIcone" class="cardClima">
+                <h3 id="dia" class="text">${cidade.dia[1]}</h3>
+                <img id="icone" class="icone" src="${cidade.icone[r]}" alt="cloud">
+            </div>
+            <div id="diaIcone" class="cardClima">
+                <h3 id="dia" class="text">${cidade.dia[2]}</h3>
+                <img id="icone" class="icone" src="${cidade.icone[r]}" alt="clouds">
+            </div>
+        </div>`
 
+    }
 
-    main.appendChild(meuH1);
+    cardImage.innerHTML = weatherCard;
+    card.appendChild(cardImage);
+
 });
->>>>>>> 2ac4fef0879636818c74827ca21dd564404276bf
+
