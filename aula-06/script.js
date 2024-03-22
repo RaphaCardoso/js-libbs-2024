@@ -91,7 +91,7 @@ const cardData = [
 
 ];*/
 
-const card = document.getElementById('card');
+/*const card = document.getElementById('card');
 
 const cities = [
     {
@@ -150,7 +150,7 @@ cities.forEach(cidade => {
             <img id="image" class="cidade" src="image/${cidade.city[i]}.png" alt="">
             <div id="nome" class="nameCity">${cidade.city[i].toUpperCase()} ${cidade.weather}&deg; C</div>
         </div>
-        <div id="linha" class="w3-row">
+        <div id="linha" class="w3-rows">
             <div id="diaIcone" class="cardClima">
                 <h3 id="dia" class="text">${cidade.dia[0]}</h3>
                 <img id="icone" class="icone" src="${cidade.icone[r]}" alt="sun">
@@ -170,5 +170,148 @@ cities.forEach(cidade => {
     cardImage.innerHTML = weatherCard;
     card.appendChild(cardImage);
 
-});
+}); */
 
+const main = document.getElementById("main");
+
+const cities = [
+    {
+        name: "londres",
+        temp: 10,
+        wheather: [
+            {
+                day: "SEG",
+                icon: "image/icons/nuvens.png"
+            },
+            {
+                day: "TER",
+                icon: "image/icons/sol.png"
+            },
+            {
+                day: "QUA",
+                icon: "image/icons/chuva.png"
+            },
+        ]
+    },
+    {
+        name: "Veneza",
+        temp: 12,
+        wheather: [
+            {
+                day: "SEG",
+                icon: "image/icons/nuvens.png"
+            },
+            {
+                day: "TER",
+                icon: "image/icons/sol.png"
+            },
+            {
+                day: "QUA",
+                icon: "image/icons/chuva.png"
+            },
+        ]
+    },
+    {
+        name: "Paris",
+        temp: -10,
+        wheather: [
+            {
+                day: "SEG",
+                icon: "image/icons/nuvens.png"
+            },
+            {
+                day: "TER",
+                icon: "image/icons/sol.png"
+            },
+            {
+                day: "QUA",
+                icon: "image/icons/chuva.png"
+            },
+        ]
+    },
+    {
+        name: "Madrid",
+        temp: 10,
+        wheather: [
+            {
+                day: "SEG",
+                icon: "image/icons/nuvens.png"
+            },
+            {
+                day: "TER",
+                icon: "image/icons/sol.png"
+            },
+            {
+                day: "QUA",
+                icon: "image/icons/chuva.png"
+            },
+        ]
+    },
+    {
+        name: "rio",
+        temp: 40,
+        wheather: [
+            {
+                day: "SEG",
+                icon: "image/icons/nuvens.png"
+            },
+            {
+                day: "TER",
+                icon: "image/icons/sol.png"
+            },
+            {
+                day: "QUA",
+                icon: "image/icons/chuva.png"
+            },
+        ]
+    },
+    {
+        name: "Salvador",
+        temp: 10,
+        wheather: [
+            {
+                day: "SEG",
+                icon: "image/icons/nuvens.png"
+            },
+            {
+                day: "TER",
+                icon: "image/icons/sol.png"
+            },
+            {
+                day: "QUA",
+                icon: "image/icons/chuva.png"
+            },
+        ]
+    }
+]
+cities.forEach(city => {
+    const w3Card = document.createElement("div");
+    w3Card.className = "w3-card-4 w3-margin";
+
+    //Para o card ficar do mesmo tam, independente da imagem
+    w3Card.style.maxWidth = "350px";
+
+    const weatherCard = `
+    <div class="w3-display-container w3-text-white">
+    <img src="image/${city.name}.png" alt="Lights" style="width:100%">
+    <div class="w3-xlarge w3-display-bottomleft w3-padding">${city.name.toUpperCase()} ${city.temp}&deg; C</div>
+    </div>
+    <div class="w3-row">
+    <div class="w3-third w3-center">
+    <h3>${city.wheather[0].day}</h3>
+    <img src="${city.wheather[0].icon}" alt="sun" style="width:80px">
+    </div>
+    <div class="w3-third w3-center">
+    <h3>${city.wheather[1].day}</h3>
+    <img src="${city.wheather[1].icon}" alt="sun" style="width:80px">
+    </div>
+    <div class="w3-third w3-center w3-margin-bottom">
+    <h3>${city.wheather[2].day}</h3>
+    <img src="${city.wheather[2].icon}" alt="sun" style="width:80px">
+    </div>
+    </div>
+`
+    w3Card.innerHTML = weatherCard;
+
+    main.appendChild(w3Card);
+});
